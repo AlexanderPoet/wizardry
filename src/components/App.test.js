@@ -3,5 +3,5 @@ import { shallow } from 'enzyme';
 import { App } from './';
 
 it('renders without crashing', () => {
-  shallow(<App />);
+  expect(shallow(<App />)).toBeTruthy();
 });

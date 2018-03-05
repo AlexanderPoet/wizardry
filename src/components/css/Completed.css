@@ -1,0 +1,18 @@
+.completed-container > div {
+  padding: 3%;
+}
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40px;
+  position: relative;
+  right: 60px;
+  bottom: 160px;
+}
+.wizard {
+  height: 200px;
+  margin-top: 10px;
+}
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

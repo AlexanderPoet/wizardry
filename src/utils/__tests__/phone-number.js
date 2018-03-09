@@ -17,4 +17,4 @@ describe('Phone Number Validator', () => {
     const invalidNumber = '7'.repeat(12);
     expect(() => phoneNumberValidator(invalidNumber)).toThrow();
   });
-})
+});

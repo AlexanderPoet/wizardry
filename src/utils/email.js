@@ -11,7 +11,7 @@ export default attempt => {
     throw new Error(errorMessage);
   } else {
     if (attemptArr2[1].length >= 1) {
-      return attempt
+      return attempt;
     } else {
       throw new Error(errorMessage);
     }

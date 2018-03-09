@@ -32,8 +32,8 @@ const ccValidator = attempt => {
   if (10 - (digitsSum % 10) === checkSum) {
     return ccNumber;
   } else {
-    throw new Error(errorMessage)
+    throw new Error(errorMessage);
   }
-}
+};
 
 export default ccValidator;

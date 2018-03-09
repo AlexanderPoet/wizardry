@@ -1,8 +1,8 @@
-import { ccValidator, emailValidator, fullNameValidator, phoneNumberValidator } from './';
+import { ccValidator, emailValidator, fullNameValidator, phoneNumberValidator, aliasValidator } from './';
 
 const funcMap = {
   'Full Name': val => fullNameValidator(val),
-  'Alias': val => val.length > 0,
+  'Alias': val => aliasValidator(val),
   'Phone Number': val => phoneNumberValidator(val),
   'Email': val => emailValidator(val),
   'Credit Card Number': val => ccValidator(val),

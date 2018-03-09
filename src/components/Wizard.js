@@ -12,7 +12,7 @@ class Wizard extends Component {
     super(props);
     this.state = {
       activeStepIndex: -1,
-      status: 'done',
+      status: 'unstarted',
       stepData: props.tabsInfo.map((info, index) => {
         const { title, Icon, forms } = info;
         const disabled = index > 0;

@@ -1,3 +1,7 @@
-import * as CCUtils from './credit-card.js';
+import ccValidator from './credit-card';
+import emailValidator from './email';
+import fullNameValidator from './full-name';
+import phoneNumberValidator from './phone-number';
+import formValidation from './form-validation';
 
-export { CCUtils, }
+export { ccValidator, formValidation, emailValidator, fullNameValidator, phoneNumberValidator };

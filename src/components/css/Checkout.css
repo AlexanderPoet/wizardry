@@ -1,0 +1,19 @@
+.checkout-title {
+  text-decoration: underline;
+  color: #7403ff;
+}
+.checkout-info {
+  padding-top: 3%;
+}
+.checkout-summary-item {
+  height: 100px;
+  margin-left: 5%;
+  display: flex;
+}
+.checkout-summary-item-small {
+  padding-top: 36px;
+  margin-right: 20%;
+}
+svg.checkout-summary-item-small {
+  flex: none;
+}

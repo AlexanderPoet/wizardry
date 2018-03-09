@@ -1,4 +1,5 @@
-const validateByLuhn = attempt => {
+const ccValidator = attempt => {
+  const errorMessage = 'Please enter a valid credit card number'
   const ccNumber = attempt.toString();
   const lengthOfAttempt = ccNumber.length;
 
@@ -8,7 +9,7 @@ const validateByLuhn = attempt => {
       index % 2 === 0;
 
   if (lengthOfAttempt < 15 || lengthOfAttempt > 16) {
-    return Promise.reject(`invalid CC #: Length: expected 15 or 16 recieved: ${lengthOfAttempt}`);
+    throw new Error(errorMessage);
   }
 
   const checkSum = Number(attempt[lengthOfAttempt - 1]);
@@ -28,9 +29,11 @@ const validateByLuhn = attempt => {
       digitsSum += Number(num);
     }
   }
-  return 10 - (digitsSum % 10) === checkSum ?
-    Promise.resolve(ccNumber) :
-    Promise.reject('invalid CC #: Checksum');
+  if (10 - (digitsSum % 10) === checkSum) {
+    return ccNumber;
+  } else {
+    throw new Error(errorMessage)
+  }
 }
 
-export { validateByLuhn }; 
+export default ccValidator;

@@ -1,19 +1,41 @@
 import React, { Component } from 'react';
-import logo from '../logo.svg';
-import './App.css';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import { PersonIcon, SelectIcon, CheckoutIcon, PaymentInfoIcon } from './icons';
+import { Wizard } from './';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      wizardTabs: [{
+        title: 'Intro',
+        Icon: PersonIcon,
+        forms: ['Full Name', 'Alias']
+      },
+      {
+        title: 'Select',
+        Icon: SelectIcon,
+        forms: ['Phone Number', 'Email']
+      },
+      {
+        title: 'Payment Info',
+        Icon: PaymentInfoIcon,
+        forms: ['Credit Card Number', 'Paypal Email']
+      },
+      {
+        title: 'Checkout',
+        Icon: CheckoutIcon,
+        forms: []
+      }]
+    }
+  }
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>#7503ff</code> and save to reload.
-        </p>
-      </div>
+      <MuiThemeProvider >
+        <Wizard
+          tabsInfo={this.state.wizardTabs}
+        />
+      </MuiThemeProvider >
     );
   }
 }

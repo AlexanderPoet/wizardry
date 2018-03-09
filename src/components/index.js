@@ -7,4 +7,12 @@ import Completed from './Completed';
 import PrimeButton from './PrimeButton';
 import Tutorial from './Tutorial';
 
-export { App, Wizard, Checkout, CustomStep, Form, Completed, PrimeButton, Tutorial};
+export { App,
+  Wizard,
+  Checkout,
+  CustomStep,
+  Form,
+  Completed,
+  PrimeButton,
+  Tutorial
+};

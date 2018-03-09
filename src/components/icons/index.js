@@ -6,4 +6,12 @@ import SelectIcon from 'material-ui/svg-icons/hardware/phonelink';
 import PaymentInfoIcon from 'material-ui/svg-icons/editor/attach-money';
 import CheckoutIcon from 'material-ui/svg-icons/action/shopping-cart';
 
-export { EditIcon, CheckCircle, WarningIcon, PersonIcon, SelectIcon, PaymentInfoIcon, CheckoutIcon }
+export {
+  EditIcon,
+  CheckCircle,
+  WarningIcon,
+  PersonIcon,
+  SelectIcon,
+  PaymentInfoIcon,
+  CheckoutIcon
+};
